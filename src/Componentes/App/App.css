@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.carrusel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+ 
+    
+    overflow: hidden; /* Evitar desbordamientos */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Evitar desbordamientos */
+    width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
+}
+
+.panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: flex 700ms ease-in;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0; /* Evitar que los paneles se reduzcan */
+    height: 70vh; /* Fijar la altura del panel */
+    width: 100px; /* Fijar la anchura inicial del panel */
+}
+
+.panel img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    border-radius: 80px;
+    transition: all 700ms ease-in;
+    box-shadow: 10px 10px 10px #003785;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
+}
+
+.panel h1 {
+    font-size: 35px;
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active img {
+    height: 100%; /* Mantener la altura */
+    width: 100%; /* Ajustar la anchura */
+}
+
+.reservando {
+    width: 250px;
+    height: 100vh;
+    right: 0;
+    top: 110px;
+}
